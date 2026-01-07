@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Webinaire Canva Pro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-icon">
+                <i class="fas fa-video"></i>
+            </div>
+            <h1 class="header-title">Webinaire Canva Pro</h1>
+            <p class="header-subtitle">Découvre comment transformer ta créativité en revenus !</p>
+        </header>
+
+        <!-- Form -->
+        <form id="webinarForm" class="form">
+            
+            <!-- Section 1 – Informations de base -->
+            <div class="form-section">
+                <div class="section-header">
+                    <i class="fas fa-user-circle"></i>
+                    <h2>Informations de base</h2>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fullName" class="required">Nom complet</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Entre ton nom complet">
+                    <span class="error-message" id="fullNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="required">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="ton.email@exemple.com">
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Numéro de téléphone <span class="optional">(optionnel)</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="+221 77 111 11 11">
+                    <p class="helper-text">
+                        <i class="fas fa-info-circle"></i>
+                        Nous pourrons te contacter uniquement si le lien WhatsApp ne fonctionne pas.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 2 – Profil et intérêt -->
+            <div class="form-section">
+                <div class="section-header">
+                    <i class="fas fa-palette"></i>
+                    <h2>Profil et intérêt</h2>
+                </div>
+
+                <div class="form-group">
+                    <label class="required">As-tu déjà utilisé Canva ?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="usedCanva" value="Oui" required>
+                            <span class="radio-label">
+                                <i class="fas fa-check-circle"></i>
+                                Oui
+                            </span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="usedCanva" value="Non" required>
+                            <span class="radio-label">
+                                <i class="fas fa-times-circle"></i>
+                                Non
+                            </span>
+                        </label>
+                    </div>
+                    <span class="error-message" id="usedCanvaError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="canvaLevel" class="required">Quel est ton niveau sur Canva ?</label>
+                    <select id="canvaLevel" name="canvaLevel" required>
+                        <option value="">Sélectionne ton niveau</option>
+                        <option value="Débutant">🌱 Débutant</option>
+                        <option value="Intermédiaire">🚀 Intermédiaire</option>
+                        <option value="Avancé">⭐ Avancé</option>
+                    </select>
+                    <span class="error-message" id="canvaLevelError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="motivation" class="required">Pourquoi souhaites-tu rejoindre ce webinaire ?</label>
+                    <textarea id="motivation" name="motivation" rows="4" required placeholder="Partage ta motivation..."></textarea>
+                    <span class="error-message" id="motivationError"></span>
+                </div>
+            </div>
+
+            <!-- Section 3 – Conscience des opportunités -->
+            <div class="form-section">
+                <div class="section-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <h2>Conscience des opportunités</h2>
+                </div>
+
+                <div class="form-group">
+                    <label class="required">Penses-tu qu'il est possible de gagner de l'argent avec Canva Pro ?</label>
+                    <div class="radio-group vertical">
+                        <label class="radio-option">
+                            <input type="radio" name="moneyAwareness" value="Oui, je sais comment" required>
+                            <span class="radio-label">
+                                <i class="fas fa-coins"></i>
+                                <div>
+                                    <strong>Oui, je sais comment</strong>
+                                    <small>J'ai déjà des idées précises</small>
+                                </div>
+                            </span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="moneyAwareness" value="Oui, mais je ne sais pas exactement comment" required>
+                            <span class="radio-label">
+                                <i class="fas fa-question-circle"></i>
+                                <div>
+                                    <strong>Oui, mais je ne sais pas exactement comment</strong>
+                                    <small>Je sais que c'est possible mais j'ai besoin d'en savoir plus</small>
+                                </div>
+                            </span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="moneyAwareness" value="Non, je n'y jamais pensé" required>
+                            <span class="radio-label">
+                                <i class="fas fa-surprise"></i>
+                                <div>
+                                    <strong>Non, je n'y jamais pensé</strong>
+                                    <small>C'est une découverte pour moi</small>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    <span class="error-message" id="moneyAwarenessError"></span>
+                </div>
+            </div>
+
+            <!-- Section 4 – Participation au groupe WhatsApp -->
+            <div class="form-section highlight-section">
+                <div class="section-header">
+                    <i class="fab fa-whatsapp"></i>
+                    <h2>Groupe WhatsApp</h2>
+                </div>
+
+                <div class="form-group">
+                    <label class="required">Veux-tu rejoindre notre groupe WhatsApp pour recevoir le lien et toutes les infos ?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="joinWhatsapp" value="Oui" required>
+                            <span class="radio-label">
+                                <i class="fab fa-whatsapp"></i>
+                                Oui, je veux rejoindre
+                            </span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="joinWhatsapp" value="Non" required>
+                            <span class="radio-label">
+                                <i class="fas fa-times"></i>
+                                Non merci
+                            </span>
+                        </label>
+                    </div>
+                    <span class="error-message" id="joinWhatsappError"></span>
+                </div>
+
+                <!-- WhatsApp Link Section (Hidden by default) -->-
+                <div id="whatsappLinkSection" class="whatsapp-link-section" style="display: none;">
+                    <div class="whatsapp-card">
+                        <div class="whatsapp-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>Rejoins-nous maintenant !</h3>
+                        <p>Clique sur le lien ci-dessous pour rejoindre notre groupe WhatsApp et recevoir toutes les infos et documents du webinaire.</p>
+                        <a href="https://chat.whatsapp.com/BWLCnn2QLvU4sLc11HJAKG" target="_blank" class="whatsapp-button">
+                            <i class="fab fa-whatsapp"></i>
+                            Rejoindre le groupe WhatsApp
+                        </a>
+                        <p class="whatsapp-note">
+                            <i class="fas fa-lock"></i>
+                            Ton numéro restera privé
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5 – Plan B contact -->
+            <div class="form-section">
+                <div class="section-header">
+                    <i class="fas fa-phone-alt"></i>
+                    <h2>Plan B - Contact de secours</h2>
+                </div>
+
+                <div class="form-group">
+                    <label class="required">Si tu rencontres un problème avec le lien WhatsApp, souhaites-tu qu'on te contacte par téléphone ou email ?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="contactIfIssue" value="Oui" required>
+                            <span class="radio-label">
+                                <i class="fas fa-check-circle"></i>
+                                Oui, contactez-moi
+                            </span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="contactIfIssue" value="Non" required>
+                            <span class="radio-label">
+                                <i class="fas fa-times-circle"></i>
+                                Non, ce n'est pas nécessaire
+                            </span>
+                        </label>
+                    </div>
+                    <span class="error-message" id="contactIfIssueError"></span>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-footer">
+                <button type="submit" class="submit-button" id="submitButton">
+                    <i class="fas fa-paper-plane"></i>
+                    Valider mon inscription
+                </button>
+            </div>
+        </form>
+
+        <!-- Success Message (Hidden by default) -->
+        <div id="successMessage" class="success-message" style="display: none;">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Inscription réussie !</h2>
+            <p>Merci pour ton inscription au webinaire Canva Pro. Tu recevras bientôt toutes les informations nécessaires.</p>
+            <button onclick="location.reload()" class="secondary-button">
+                <i class="fas fa-plus"></i>
+                Nouvelle inscription
+            </button>
+        </div>
+    </div>
+
+    <script src="js/google-sheets.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
